@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p6F-Cg-7o0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+            <string>Optima-ExtraBlack</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="3Av-i7-oHN">
+            <objects>
+                <viewController id="p6F-Cg-7o0" customClass="HangmanViewController" customModule="Hangman" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UjQ-Ow-cFo"/>
+                        <viewControllerLayoutGuide type="bottom" id="EfV-bc-gcY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9of-il-UAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingslanding" translatesAutoresizingMaskIntoConstraints="NO" id="rnN-BM-yG0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h0" translatesAutoresizingMaskIntoConstraints="NO" id="Paj-yM-qrI">
+                                <rect key="frame" x="58" y="0.0" width="260" height="367"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="hfH-gv-U6Q"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wood" translatesAutoresizingMaskIntoConstraints="NO" id="Yo6-BS-XGr">
+                                <rect key="frame" x="-1" y="356" width="375" height="311"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3f6-um-dp4">
+                                <rect key="frame" x="14.5" y="447" width="345" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQv-jV-0pz">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="44.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d5-hb-YaW">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="zQ5-yv-mua"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qli-xL-lNF">
+                                                <rect key="frame" x="49.5" y="0.0" width="49" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="cuJ-m1-Vlb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fR-Ig-aRT">
+                                                <rect key="frame" x="98.5" y="0.0" width="49.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="K31-al-Aw7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VL-na-NIK">
+                                                <rect key="frame" x="148" y="0.0" width="49" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="WAK-Pi-xOj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wF-5Q-8rT">
+                                                <rect key="frame" x="197" y="0.0" width="49.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="IhG-EI-BWS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ7-lm-dHd">
+                                                <rect key="frame" x="246.5" y="0.0" width="49" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="fXe-9Q-8y2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAb-LO-EgI">
+                                                <rect key="frame" x="295.5" y="0.0" width="49.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="bhV-uw-yxr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8VL-na-NIK" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="99Q-EF-pI0"/>
+                                            <constraint firstItem="RQ7-lm-dHd" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="CC3-Y2-83R"/>
+                                            <constraint firstItem="2fR-Ig-aRT" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="FB8-2X-hRl"/>
+                                            <constraint firstItem="6wF-5Q-8rT" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="Fg1-NZ-695"/>
+                                            <constraint firstItem="RQ7-lm-dHd" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="SVT-Uu-eiL"/>
+                                            <constraint firstItem="yAb-LO-EgI" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="dcv-wv-tE9"/>
+                                            <constraint firstItem="8VL-na-NIK" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="hMC-jC-7Ep"/>
+                                            <constraint firstItem="yAb-LO-EgI" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="hx1-9C-dFY"/>
+                                            <constraint firstItem="6wF-5Q-8rT" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="jLG-JM-Y9C"/>
+                                            <constraint firstItem="Qli-xL-lNF" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="mII-ps-VqO"/>
+                                            <constraint firstItem="Qli-xL-lNF" firstAttribute="height" secondItem="1d5-hb-YaW" secondAttribute="height" id="qXI-CL-5Vc"/>
+                                            <constraint firstItem="2fR-Ig-aRT" firstAttribute="width" secondItem="1d5-hb-YaW" secondAttribute="width" id="z0L-sF-P7Q"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82s-ie-CKY">
+                                        <rect key="frame" x="0.0" y="44.5" width="345" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUS-ER-ETL">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="Mdy-CB-Wpq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS2-3v-LUd">
+                                                <rect key="frame" x="49.5" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="ene-8N-icw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N40-6m-qOi">
+                                                <rect key="frame" x="98.5" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="vzZ-3y-UUK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sv-NN-93P">
+                                                <rect key="frame" x="148" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="FIj-0f-w2v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-z3-tlb">
+                                                <rect key="frame" x="197" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="p7z-yk-d5H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4o-rg-960">
+                                                <rect key="frame" x="246.5" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="3DV-VM-cMX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZB-ui-BZj">
+                                                <rect key="frame" x="295.5" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="8I6-3Q-xbB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="a4o-rg-960" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="8OJ-fE-twg"/>
+                                            <constraint firstItem="8b3-z3-tlb" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="8p3-v2-uwj"/>
+                                            <constraint firstItem="7Sv-NN-93P" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="9XB-6O-NRO"/>
+                                            <constraint firstItem="8b3-z3-tlb" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="Cty-Lj-DUk"/>
+                                            <constraint firstItem="oS2-3v-LUd" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="D43-vr-wK4"/>
+                                            <constraint firstItem="a4o-rg-960" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="DCa-L8-tm4"/>
+                                            <constraint firstItem="N40-6m-qOi" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="G46-y9-I9S"/>
+                                            <constraint firstItem="N40-6m-qOi" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="Hs0-9v-hti"/>
+                                            <constraint firstItem="7Sv-NN-93P" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="bTe-mZ-MEL"/>
+                                            <constraint firstItem="RZB-ui-BZj" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="eKT-55-kYE"/>
+                                            <constraint firstItem="RZB-ui-BZj" firstAttribute="height" secondItem="rUS-ER-ETL" secondAttribute="height" id="jS1-lS-q5B"/>
+                                            <constraint firstItem="oS2-3v-LUd" firstAttribute="width" secondItem="rUS-ER-ETL" secondAttribute="width" id="tgo-2q-0Us"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnL-Zt-ham">
+                                        <rect key="frame" x="0.0" y="89.5" width="345" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWl-Ej-gRQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="u9l-df-g7B"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-mt-Ivs">
+                                                <rect key="frame" x="49.5" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="EOl-Lf-7N6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-1b-t6M">
+                                                <rect key="frame" x="98.5" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="51f-Ke-yCo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUQ-6a-MzM">
+                                                <rect key="frame" x="148" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="HqZ-fC-dwP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-2Q-UVS">
+                                                <rect key="frame" x="197" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="PNi-fV-kWD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQr-c2-nMR">
+                                                <rect key="frame" x="246.5" y="0.0" width="49" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="oIh-mb-ZX7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XM3-Zr-KBc">
+                                                <rect key="frame" x="295.5" y="0.0" width="49.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="U">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="nV3-Yu-HuA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pQr-c2-nMR" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="5H7-qr-3XQ"/>
+                                            <constraint firstItem="cDA-1b-t6M" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="Eic-kz-PSZ"/>
+                                            <constraint firstItem="9NW-2Q-UVS" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="QpG-Cc-uVa"/>
+                                            <constraint firstItem="cUQ-6a-MzM" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="T6z-21-EVH"/>
+                                            <constraint firstItem="pQr-c2-nMR" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="UcK-op-RHr"/>
+                                            <constraint firstItem="XM3-Zr-KBc" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="Vzc-Te-M8d"/>
+                                            <constraint firstItem="cDA-1b-t6M" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="XJI-Ik-XPW"/>
+                                            <constraint firstItem="Sfq-mt-Ivs" firstAttribute="width" secondItem="FWl-Ej-gRQ" secondAttribute="width" id="Y0L-mH-SuK"/>
+                                            <constraint firstItem="cUQ-6a-MzM" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="YI3-53-Nun"/>
+                                            <constraint firstItem="XM3-Zr-KBc" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="iS6-df-2Pg"/>
+                                            <constraint firstItem="9NW-2Q-UVS" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="w3I-ew-CDL"/>
+                                            <constraint firstItem="Sfq-mt-Ivs" firstAttribute="height" secondItem="FWl-Ej-gRQ" secondAttribute="height" id="yg6-Sv-Fnc"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwZ-km-bcR">
+                                        <rect key="frame" x="0.0" y="134.5" width="345" height="45.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zm2-r9-zH9">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="V">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="OSN-ce-oAI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-XW-OGN">
+                                                <rect key="frame" x="69" y="0.0" width="69" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="W">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="L5d-IG-TRD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQi-EA-zlm">
+                                                <rect key="frame" x="138" y="0.0" width="69" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="0jh-DK-YvZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWU-fH-oGv">
+                                                <rect key="frame" x="207" y="0.0" width="69" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="Y">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="6Ms-v4-g9m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI5-OV-hOT">
+                                                <rect key="frame" x="276" y="0.0" width="69" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="26"/>
+                                                <state key="normal" title="Z">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="eIC-hO-9Qf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TQi-EA-zlm" firstAttribute="height" secondItem="Zm2-r9-zH9" secondAttribute="height" id="6Ud-TM-4wZ"/>
+                                            <constraint firstItem="kOg-XW-OGN" firstAttribute="height" secondItem="Zm2-r9-zH9" secondAttribute="height" id="Cv7-Kq-Z25"/>
+                                            <constraint firstItem="TQi-EA-zlm" firstAttribute="width" secondItem="Zm2-r9-zH9" secondAttribute="width" id="Grn-FA-GeX"/>
+                                            <constraint firstItem="lI5-OV-hOT" firstAttribute="height" secondItem="Zm2-r9-zH9" secondAttribute="height" id="OJr-id-VEk"/>
+                                            <constraint firstItem="wWU-fH-oGv" firstAttribute="width" secondItem="Zm2-r9-zH9" secondAttribute="width" id="ZL8-3J-wjg"/>
+                                            <constraint firstItem="lI5-OV-hOT" firstAttribute="width" secondItem="Zm2-r9-zH9" secondAttribute="width" id="buk-nc-Sl9"/>
+                                            <constraint firstItem="kOg-XW-OGN" firstAttribute="width" secondItem="Zm2-r9-zH9" secondAttribute="width" id="h6W-wo-Fhn"/>
+                                            <constraint firstItem="wWU-fH-oGv" firstAttribute="height" secondItem="Zm2-r9-zH9" secondAttribute="height" id="iQb-xo-7Pj"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EQv-jV-0pz" firstAttribute="height" secondItem="82s-ie-CKY" secondAttribute="height" id="0uW-6c-kC9"/>
+                                    <constraint firstItem="82s-ie-CKY" firstAttribute="height" secondItem="hnL-Zt-ham" secondAttribute="height" id="EIh-Fl-1YV"/>
+                                    <constraint firstItem="hnL-Zt-ham" firstAttribute="height" secondItem="LwZ-km-bcR" secondAttribute="height" id="czO-12-wMK"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect:" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFo-tE-5FW">
+                                <rect key="frame" x="0.0" y="413.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUY-3T-jgd">
+                                <rect key="frame" x="-1" y="284" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWb-nt-t26">
+                                <rect key="frame" x="132" y="629" width="109" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="31"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeGuess:" destination="p6F-Cg-7o0" eventType="touchUpInside" id="N88-cl-6dh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nM-Sb-6SF">
+                                <rect key="frame" x="112" y="411" width="165" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CUY-3T-jgd" firstAttribute="width" secondItem="9of-il-UAR" secondAttribute="width" id="0Cy-LP-zlv"/>
+                            <constraint firstItem="CUY-3T-jgd" firstAttribute="centerY" secondItem="9of-il-UAR" secondAttribute="centerY" multiplier="1.18" id="0r5-WZ-eV8"/>
+                            <constraint firstItem="rnN-BM-yG0" firstAttribute="width" secondItem="9of-il-UAR" secondAttribute="width" id="1yl-dK-p2Y"/>
+                            <constraint firstItem="EFo-tE-5FW" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="7ac-BY-04S"/>
+                            <constraint firstItem="Yo6-BS-XGr" firstAttribute="width" secondItem="9of-il-UAR" secondAttribute="width" id="9H2-SZ-8dn"/>
+                            <constraint firstItem="Yo6-BS-XGr" firstAttribute="centerX" secondItem="3f6-um-dp4" secondAttribute="centerX" id="Cxq-UX-OlL"/>
+                            <constraint firstItem="EfV-bc-gcY" firstAttribute="top" secondItem="Yo6-BS-XGr" secondAttribute="bottom" id="Dva-ha-sGu"/>
+                            <constraint firstItem="Paj-yM-qrI" firstAttribute="top" secondItem="UjQ-Ow-cFo" secondAttribute="bottom" constant="-20" id="EkY-tb-4sg"/>
+                            <constraint firstItem="3f6-um-dp4" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="ItJ-MC-IHd"/>
+                            <constraint firstItem="iWb-nt-t26" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="JIM-Oa-Oz5"/>
+                            <constraint firstItem="iWb-nt-t26" firstAttribute="bottom" secondItem="EfV-bc-gcY" secondAttribute="top" id="JgQ-Jm-PNg"/>
+                            <constraint firstItem="CUY-3T-jgd" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="QAP-Jp-qfN"/>
+                            <constraint firstItem="rnN-BM-yG0" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="RTw-vJ-v9w"/>
+                            <constraint firstItem="EfV-bc-gcY" firstAttribute="top" secondItem="3f6-um-dp4" secondAttribute="bottom" constant="40" id="RbS-98-ywf"/>
+                            <constraint firstItem="EFo-tE-5FW" firstAttribute="centerY" secondItem="9of-il-UAR" secondAttribute="centerY" multiplier="1.27" id="Vxw-uT-ndA"/>
+                            <constraint firstItem="0nM-Sb-6SF" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="a6y-yf-5jv"/>
+                            <constraint firstItem="rnN-BM-yG0" firstAttribute="bottom" secondItem="Yo6-BS-XGr" secondAttribute="top" id="b9n-8l-fMG"/>
+                            <constraint firstItem="EFo-tE-5FW" firstAttribute="width" secondItem="9of-il-UAR" secondAttribute="width" id="bWQ-1d-pPa"/>
+                            <constraint firstItem="Yo6-BS-XGr" firstAttribute="height" secondItem="9of-il-UAR" secondAttribute="height" multiplier="0.45" id="bwf-CZ-CKS"/>
+                            <constraint firstItem="3f6-um-dp4" firstAttribute="height" secondItem="Yo6-BS-XGr" secondAttribute="height" multiplier="0.6" id="fue-pP-8s3"/>
+                            <constraint firstItem="Paj-yM-qrI" firstAttribute="centerX" secondItem="9of-il-UAR" secondAttribute="centerX" id="hMy-Tn-8Zh"/>
+                            <constraint firstItem="rnN-BM-yG0" firstAttribute="top" secondItem="UjQ-Ow-cFo" secondAttribute="bottom" constant="-20" id="jt0-kK-30p"/>
+                            <constraint firstItem="Paj-yM-qrI" firstAttribute="bottom" secondItem="Yo6-BS-XGr" secondAttribute="top" id="oqn-UO-5Po"/>
+                            <constraint firstItem="3f6-um-dp4" firstAttribute="centerY" secondItem="9of-il-UAR" secondAttribute="centerY" multiplier="0.7" constant="-130" id="rbt-f1-YXa"/>
+                            <constraint firstItem="0nM-Sb-6SF" firstAttribute="centerY" secondItem="9of-il-UAR" secondAttribute="centerY" multiplier="1.325" id="rir-Vo-uf4"/>
+                            <constraint firstItem="3f6-um-dp4" firstAttribute="width" secondItem="9of-il-UAR" secondAttribute="width" constant="-30" id="s4I-GU-x7N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="rnN-BM-yG0" id="ebO-1m-rH5"/>
+                        <outlet property="currentGuessLabel" destination="0nM-Sb-6SF" id="d5v-i9-Zop"/>
+                        <outlet property="guessesLabel" destination="EFo-tE-5FW" id="fP1-6G-ITZ"/>
+                        <outlet property="hangmanImageView" destination="Paj-yM-qrI" id="mcJ-ME-Iib"/>
+                        <outlet property="wordProgress" destination="CUY-3T-jgd" id="hZb-2t-oY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2u-Rx-i6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802.39999999999998" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="h0" width="900" height="1458"/>
+        <image name="kingslanding" width="1920" height="1073"/>
+        <image name="wood" width="1000" height="1158"/>
+    </resources>
+</document>
